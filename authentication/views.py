@@ -17,7 +17,5 @@ class UsernameValidationView(View):
             return JsonResponse({'username_error': 'usuário deve ter apenas caracteres alfanuméricos(1-9,a-z)'},status = 400)
         if User.objects.filter(username= username).exists():
             return JsonResponse({'username_error':'usuário já existe'})
-        if User.objects.filter(username= username).exists:
-            pass
         
         return JsonResponse({'username_valid':True})

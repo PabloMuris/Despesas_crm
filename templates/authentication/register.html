@@ -1,7 +1,8 @@
 {% extends 'register-base.html' %}
 {% load static %}
 {%block content%}
-<form action="" method="post">
+<form action="" method="post">{% csrf_token %}
+  
     <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
     <h1 class="h3 mb-3 fw-normal">Cadastre-se</h1>
 
@@ -11,6 +12,9 @@
                         id="usernameField" 
                         class="form-control">
         <label for="usernameField">Usuário</label>
+      </div>
+      <div class="invalid-feedback">
+        <p></p>
       </div>
     <div class="form-floating">
       <input type="email" class="form-control" id="emailField" placeholder="name@example.com">
@@ -33,7 +37,7 @@
   </form>
 
 
-<script src="{% static 'js/auhentication/register.js'%}"></script>
+<script src="{% static 'js/authentication/register.js'%}"></script>
 
 {%endblock content%}
 

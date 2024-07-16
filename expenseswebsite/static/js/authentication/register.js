@@ -1,5 +1,6 @@
 const usernameField=document.querySelector('#usernameField');
-const feedBackArea = document.querySelector('.invalid_feedback')
+const feedBackArea = document.querySelector('.invalid_feedback');
+const emailField = document.querySelector('#emailField');
 usernameField.addEventListener('keyup',(e)=> {
 
     const usernameVal = e.target.value;
